@@ -27,6 +27,7 @@ def get_page(path):
             web_data.close()
             print("file closed")
 
+
 if __name__ == "__main__":
     local_path = './resources/index.html'
     get_page(local_path)
