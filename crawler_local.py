@@ -10,15 +10,6 @@ def get_page(path):
         prices = soup.select("body > div > div > div.col-md-9 > div > div > div > div.caption > h4.pull-right")
         reviews = soup.select("body > div > div > div.col-md-9 > div > div > div > div.ratings > p.pull-right")
         stars = soup.select("body > div > div > div.col-md-9 > div > div > div > div.ratings > p:nth-of-type(2)")
-        for title, image, review, price, star in zip(titles, images, reviews, prices, stars):
-            data = {
-                "image": image.get("src"),
-                "title": title.get_text(),
-                "price": price.get_text(),
-                "review": review.get_text(),
-                "star": ['*' * len(star.find_all('span',  class_='glyphicon glyphicon-star'))]
-            }
-            print(data)
     except IOError:
         print("Error: can\'t find file or read data")
     finally:
