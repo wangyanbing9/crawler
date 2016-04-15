@@ -26,7 +26,7 @@ def get_page(path):
         if 'web_data' in locals():
             web_data.close()
             print("file closed")
-            
+
 if __name__ == "__main__":
     local_path = './resources/index.html'
     get_page(local_path)
