@@ -9,6 +9,7 @@ urls = ['https://www.tripadvisor.com.hk' \
 
 def get_attractions(url, data=None):
     web_data = requests.get(url)
+    print(web_data.text)
     soup = BeautifulSoup(web_data.text, "lxml")
     titles = soup.select('div.property_title > a[target="_blank]')
     imgs = soup.select('img[width="160"]')

@@ -18,6 +18,4 @@ def get_mobile_data(url):
     for img in imgs:
         print(img.get('src'))
 if __name__ == "__main__":
-    get_mobile_data(url_ta)  # 手机端也无法爬取到图片地址了
-
-
+    get_mobile_data(url_ta)

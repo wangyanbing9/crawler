@@ -9,7 +9,7 @@ from bs4 import BeautifulSoup
 class DownloadImg(object):
     """Download images"""
 
-    SAVE_FOLDER = '\\download\\'
+    SAVE_FOLDER = '\\download_weheartit\\'
 
     def download(self):
         web_data = requests.get(URL)
